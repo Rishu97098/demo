@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+    <style>
+        button{
+            background-color: aqua;
+            color: black;
+        }
+        button:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline Events</h1>
+    <button onclick="alert('welocme to programing world')">greeting</button>
+    <button ondblclick="alert('hii welocme to my program')">greeting again</button>
+    <button onmouseover="alert('hii welocme to my program')">greeting again</button>
+
+    <h1>Dom event handler</h1>
+    <button id="myBtn">greeting</button>
+    <button id="myBtn1">greeting again</button>
+
+    <h1>addEventListener and event handler</h1>
+    <button id="addEventBtn1">greeting</button>
+    <button id="addEventBtn2">greeting again</button>
+
+    <script>
+       document.getElementById("myBtn").onclick = function(){
+            alert("korthgm");
+        };
+
+        document.getElementById('myBtn1').ondblclick = function(){
+            alert('hii');
+        };
+
+        document.getElementById('addEventBtn1').addEventListener('click', function() {
+            alert('Welcome to the programming world using addEventListener!');
+        });
+
+        document.getElementById("addEventBtn2").addEventListener('dblclick', () => {
+            alert('Double-clicked! Welcome again using addEventListener!');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 55%;
+}
+body{
+    height: 100vh;
+    background-color: aqua;
+    font-family: "Urbanist", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    background-color:aquamarine;
+    width: 300px;
+    height: 500px;
+    border: 2px solid red;
+    text-align: center;
+     
+}
+p{
+    font-size: 10rem;
+}
+button {
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.6;
+    background-color: #f50e0e;
+    margin: 0;
+    box-shadow: 0 0 2px 1px rgba(116, 124, 187, 0.338);
+}
+button {
+    background-color: #ea0d02;
+    padding: 0.6rem 2.4rem;
+    border-radius: 10rem;
+    margin-right: 3.6rem;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.6;
+  
+    &:hover {
+      box-shadow: inset 0 0 0 0.2rem #ea0505;
+      background-color: transparent;
+      color: #f00e0e;
+    }
+}
+.buton{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 2.4rem;
+}
+.resetvalue{
+    margin-top: 2rem;
+    & p{
+        font-size: 1.8rem;
+        margin-top: 0.6rem;
+    }
+}

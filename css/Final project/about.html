@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      :root {
+        --main-color: #0062ff;
+        --supporting-color: #ebf3fe;
+        --font-color: #424242;
+        /* --bg-color: #ffffff; */
+        --bg-color: #f7fcff;
+        --heading-color: #000a19;
+        --hero-heading-color: #003b99;
+        --white-color: #ffffff;
+        --para-color: #504e4d;
+        --bnt-hover-bg-color: #003b99;
+        --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        --footer-bg-color: #040d12;
+      }
+      .section-about .about-div {
+        text-align: center;
+      }
+
+      .about-div .about-icon img {
+        padding: 2.4rem;
+        background-color: var(--supporting-color);
+        width: 15rem;
+        height: auto;
+        border-radius: 50%;
+        transition: all 0.3s linear;
+      }
+      .about-icon img:hover {
+        rotate: 360deg;
+        /* background-color: RED; */
+        background: linear-gradient(
+          90deg,
+          rgba(17, 215, 96, 0.9444152661064426) 32%,
+          rgba(33, 126, 103, 0.6250875350140056) 91%
+        );
+      }
+      .course-div .about-icon img {
+        padding: 2.4rem;
+        background-color: var(--supporting-color);
+        width: 10rem;
+        height: auto;
+        border-radius: 50%;
+        /* box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;; */
+      }
+      .course-div {
+        margin: 2.4rem;
+        padding: 2.4rem;
+        background-color: var(--white-color);
+      }
+      .section-course {
+        background-color: var(--bg-color);
+      }
+      .section-course .grid {
+        margin: 2.4rem;
+        padding: 2.4rem;
+      }
+      .section-course .course-div:hover {
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+      }
+
+      /***** WHY CHHOSE SECTION *****/
+
+      .section-why--choose {
+        width: 100%;
+        height: 50rem;
+      }
+      .why-choose-div {
+        margin-top: 2.4rem;
+      }
+
+      .section-why--choose .choose-left--div .why-choose-div {
+        /* text-align: right; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        text-align: right;
+        margin-top: 2.4rem;
+      }
+
+      .common-text--heighlight {
+        width: 6rem;
+        aspect-ratio: 1;
+        background-color: var(--supporting-color);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+    </style>
+    <section class="section-about">
+      <div class="contenar">
+        <h2 class="section-common-heading">About SPARS Organization</h2>
+        <p class="section-common-subheading">
+          Guding your farming journy through SPRAS for Planting, Irrigation,
+          Harvesting
+        </p>
+      </div>
+      <div class="contenar grid grid-three--col">
+        <div class="about-div">
+          <div class="about-icon">
+            <img src="./image/treditional logo" alt="treditional style " />
+          </div>
+          <h2 class="common-section--title">Treditional Style</h2>
+          <p>
+            We start by learning what you need. We look what's new and excitin
+            in farming and choose the style whatyou want to grow.
+          </p>
+        </div>
+        <div class="about-div">
+          <div class="about-icon">
+            <img src="./image/modern farming" alt="modern  " />
+          </div>
+          <h2 class="common-section--title">Modern Style</h2>
+          <p>
+            We start by learning what you need. We look what's new and excitin
+            in farming and choose the style whatyou want to grow.
+          </p>
+        </div>
+        <div class="about-div">
+          <div class="about-icon">
+            <img src="./image/industrial farming" alt="treditional style " />
+          </div>
+          <h2 class="common-section--title">Industrial</h2>
+          <p>
+            We start by learning what you need. We look what's new and excitin
+            in farming and choose the style whatyou want to grow.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

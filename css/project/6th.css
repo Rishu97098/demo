@@ -1,0 +1,26 @@
+body{
+    overflow: hidden;
+    width: 100wh;
+    height:100vh;
+    background-image:linear-gradient(
+        rgba(0, 0, 0, .4),
+        rgba(0, 0, 0, .4)
+    )
+    ,url(/jj.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.rain{
+    width: 100vw;
+    aspect-ratio: 1;
+    background-image: url(./rain.png);
+    animation: rainn 2.5s linear infinite;
+}
+@keyframes rainn {
+    0%{
+        background-position: 0% 0%;
+    }
+    100%{
+        background-position: 10% 100%;
+    }
+}

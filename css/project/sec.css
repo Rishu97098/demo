@@ -1,0 +1,36 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items:center;
+}
+.contanior-img{
+    width: 60vw;
+    height: 50rem;
+    border-radius: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background-image:url(./jj.jpg);
+    background-size: cover;
+
+    animation: galary 20s linear infinite;
+}
+@keyframes galary{
+    0%{
+        background-image: url(./jj.jpg);
+    }
+    20%{
+        background-image: url(./jj1.jpg);
+    }
+    40%{
+        background-image: url(./jj2.jpg);
+    }
+    60%{
+        background-image: url(./jj3.jpg);
+    }
+    80%{
+        background-image: url(./jj4.jpg);
+    }
+
+}
+html{
+    font-size: 62.5%;
+}

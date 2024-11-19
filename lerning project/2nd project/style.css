@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 85.37%;
+}
+
+.main-contenar {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+/***** nave *****/
+.nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: greenyellow;
+
+    & .logo img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    & button {
+        border-radius: 18px;
+        font-size: 2rem;
+        font-weight: 1.5rem;
+        background-color: rgb(240, 34, 34);
+        color: beige;
+        display: inline-block;
+        font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 100;
+        line-height: normal;
+        margin: 8px 15px;
+        min-height: 5px;
+        min-width: 0;
+        outline: none;
+         padding: 5px 10px;
+
+    }
+}
+
+.nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+
+    & li a {
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 2rem;
+    }
+}
+
+/***** End nave *****/
+
+/***** body section *****/
+.contenar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(89, 74, 74);
+
+    & .about {
+        margin-top: 5rem;
+        margin-left: 4rem;
+    }
+
+    & h1 {
+        font-size: 4rem;
+        font-weight: 3rem;
+        color: aqua;
+    }
+
+    & p {
+        margin-top: 3rem;
+        font-size: 1rem;
+        font-weight: 1rem;
+        word-spacing: .5rem;
+        color: rgb(6, 247, 14);
+    }
+
+    & button {
+        margin-top: 4rem;
+        background-color: rgb(10, 127, 243);
+        font-size: 2rem;
+        font-weight: 1.5rem;
+        border-radius: 15%;
+        padding: .5rem;
+    }
+
+    & .pic img {
+        height: 35rem;
+        width: 30rem;
+        margin-left: 7rem;
+    }
+
+}/* From Uiverse.io by bhaveshxrawat */ 
+.card {
+    width: 190px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .card h2 {
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  /* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  
+  .about a{
+    display: inline;
+    direction: none;
+    color: brown;
+    text-decoration: none;
+  }

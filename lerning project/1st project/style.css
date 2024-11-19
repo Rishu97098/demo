@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 85.37%;
+}
+.main-contenar{
+    margin-left:2rem ;
+    margin-right:3rem;
+    background-color:black;
+}
+.sub-contenar{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-two--col{
+    grid-template-columns: repeat(2,1fr);
+}
+.logo img{
+    height: 50px;
+    width: 100px;
+}
+.nav ul {
+    display:flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    
+    & li a {
+        color:whitesmoke;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
+        display: inline-block;
+        text-decoration: none;
+    }
+}

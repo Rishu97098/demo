@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my first project</h1>
+    <input type="text" id="inp">
+    <button class="clic">click me</button>
+    <script>
+        let inputB = document.getElementById('inp');
+        let clickB = document.querySelector('.clic');
+        console.log(inputB);
+        console.log(clickB);
+
+        let addTodo = () => {
+            console.log(inputB.value);
+            
+        }
+        
+        clickB.addEventListener("click",() =>{
+            addTodo();
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 85.37%;
+}
+
+.main-contenar{
+    /* & .contenar img{
+        width: 100%;
+    } */
+}
+
+/***** nav *****/ 
+.nave{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(28, 23, 23);
+
+    & ul{
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+
+        & li a{
+            display: inline-block;
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: 1rem;
+            padding-left: 1rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+
+        }
+    }
+
+    & i{
+        color: antiquewhite;
+        margin-right: 10rem;
+        padding: 1rem;
+        margin-left: 55rem;
+        
+    }
+}
+i:hover{
+    background-color: brown;
+}
+li:hover{
+    color: rgb(41, 37, 37);
+    background-color: aquamarine;
+}
+/***** End nav *****/
+/***** image section *****/ 
+.main-contenar .img-contenar{
+    width: 100vw;
+    height: 90vh;
+    border-radius: 1rem; 
+    background-image: url(./img/chicago.jpg);
+    background-size: cover;
+
+    animation: gallery 5s linear infinite;
+}
+@keyframes gallery{
+    0%{
+        background-image: url(./img/chicago.jpg);
+    }
+    50%{
+        background-image: url(./img/la.jpg);
+    }
+    75%{
+        background-image: url(./img/ny.jpg);
+    }
+}
+/***** End image section *****/
+/***** about *****/  
+.about-main{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    & .about{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        & h1{
+            padding-top: 5rem;
+            padding-bottom: 2.5rem;
+        }
+        & h2{
+            padding-bottom: 1.5rem;
+        }
+    }
+    & .card{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 2rem;
+        padding-top: 2.5rem;
+      & img{
+        width: 15rem;
+        height:auto;
+      }
+      & h4{
+        padding-bottom: 1rem;
+      }
+    }
+}
+/***** End about *****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

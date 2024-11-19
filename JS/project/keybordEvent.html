@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keybordevent</title>
+    <style>
+        html{
+            font-size: 82.5%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .kk{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: aqua;
+             & div{
+                margin-top: 2rem;
+                height: 10rem;
+                width: 12rem;
+                background-color: aquamarine;
+                border-left: 4px solid white;
+                padding-left: 1.5rem ;
+                border-radius: 2px;
+             }
+            & #myInput{
+                border-radius: 5px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="kk">
+        <input type="text" id="myInput" placeholder="type">
+        <div class="output">
+            <p class="keyPressed">key pressed:</p>
+            <p class="keyCode">Key code:</p>
+            <p class="charCode">char codeAt:</p>
+            <p class="eventType">Event type:</p>
+        </div>
+    </div>
+    <script> 
+        const handlePressKey= (Event)=>{
+            console.log(event);
+            console.log("Key code:",event.key);
+            console.log("char codeAt:",event.code);
+            console.log("Event type:",event.type);
+            document.querySelector(".keyPressed").textContent = `key pressed: ${event.key}`
+            document.querySelector(".keyCode").textContent = `Key code: ${event.code}`
+            document.querySelector(".charCode").textContent = `char codeAt: ${event.key.charCodeAt(0)}`
+            document.querySelector(".eventType").textContent = `Event type: ${event.type}`
+        };
+        const myInp = document.getElementById("myInput");
+        myInp.addEventListener("keydown",handlePressKey);
+    </script>
+</body>
+</html>

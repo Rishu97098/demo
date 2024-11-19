@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toDo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(99, 152, 93);
+        }
+        button{
+            background-color: aqua;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        button:hover{
+                background-color: red;
+            }
+        #inPut{
+            border-radius: 10px;
+            padding: 5px;
+        }
+        .main_div_element{
+            display: grid;
+            grid-template-columns: 1fr .3fr;
+            align-items: center;
+            height: auto;
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <br>
+    <form>
+        <div>
+            <input type="text" id="inPut">
+            <button class="btn">Add ToDo</button>
+        </div>
+        <section>
+            <div class="todo_list_elem"></div>
+        </section>
+    </form>
+    <script >
+        const ele = document.querySelector("#inPut");
+        const btn = document.querySelector(".btn");
+        const toDoList = document.querySelector(".todo_list_elem");
+
+
+        let getListLocal = () =>{
+           return JSON.parse(localStorage.getItem("fruitName"));
+        };
+        const addRestorData =(localStor)=>{
+            return localStorage.setItem("fruitName",JSON.stringify(localStor));
+        }
+        let localStor = getListLocal()||[];
+        
+
+        const addToDoElement=(cureEle)=>{
+            
+            const divElement = document.createElement("div");
+            divElement.classList.add("main_div_element");
+            divElement.innerHTML = `<li>${cureEle}</li><button class="deleteBtn">Delete</button>`;
+            toDoList.append(divElement);
+        }
+        const addToDoList = (e) =>{
+            e.preventDefault();
+            const Elementvelu = ele.value.trim();
+            ele.value = "";
+            if (Elementvelu === "") {
+                alert("Please enter a task!");
+                 return;
+            }
+            if (localStor.includes(Elementvelu)) {
+                alert("Task already exists!");
+                return;
+            }
+
+            if(Elementvelu != "" &&!localStor.includes(Elementvelu)){
+            localStor.push(Elementvelu);
+            localStor = [...new Set(localStor)];
+            localStorage.setItem("fruitName",JSON.stringify(localStor));
+            console.log(localStor);
+            
+
+            addToDoElement(Elementvelu);
+            }  
+        };
+        const showList=()=>{
+            localStor.forEach((cureEle) =>{
+                addToDoElement(cureEle);
+            });
+            console.log(localStor);
+        }
+        showList();
+        const removeList=(e)=>{
+            const removTaget = e.target;
+            const listContn = removTaget.previousElementSibling.innerText;
+            const Curdiv = removTaget.parentElement;
+            console.log(listContn);
+
+            // localStor = localStor.filter((CurTodo) => {
+            //     return CurTodo !== listContn.toLowerCase();
+            // });
+            localStor = localStor.filter((CurTodo) => CurTodo.toLowerCase() !== listContn.toLowerCase());
+            
+            
+            addRestorData(localStor);
+            Curdiv.remove();
+            console.log(localStor);
+        }
+        toDoList.addEventListener("click",(e)=>{
+            e.preventDefault();
+            if(e.target.classList.contains("deleteBtn")){
+            removeList(e);
+            };
+        });
+        btn.addEventListener("click",(e)=>{            
+            addToDoList(e);
+        });
+    </script>
+</body>
+</html>

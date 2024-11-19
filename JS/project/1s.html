@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+    <style>
+        .main{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            & button{
+                background-color: #04AA6D; /* Green */
+                border-radius: 8px;
+                color: white;
+                padding: 15px 32px;
+                margin-top: 4px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Simple DOm ToDo app</h1>
+        <input type="text" value="fruit" id="inputfild">
+        <button class="btn">click</button>
+        <!-- <p id="ToDo"></p> -->
+         <div class="toto"></div>
+    </div>
+    <script>
+        let inputElm = document.getElementById('inputfild');
+        let clickBtn = document.querySelector('.btn');
+        let todo = document.getElementById('ToDo');
+        let totoE = document.querySelector(".toto");
+        // console.log(inputElm);
+        // console.log(clickBtn);
+
+        const addTodo = () =>{
+            console.log(inputElm.value);
+            // todo.innerText = inputElm.value;
+            let pElem = document.createElement('p');
+            pElem.textContent= inputElm.value;
+            console.log(pElem);
+            totoE.append(pElem);
+
+            inputElm.value = "";
+        }
+
+        clickBtn.addEventListener("click",() =>{
+            addTodo();
+        });
+    </script>
+</body>
+</html>

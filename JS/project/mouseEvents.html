@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseventt</title>
+    <style>
+        html{
+            font-size: 82.5%;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .rectangle{
+            height: 10rem;
+            width: 10rem;
+            border-radius: 1rem;
+            background-color: blue;
+            margin-bottom:1rem;
+            transition: all 0.3s linear;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        section{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* margin-top:20%; */
+        }
+        .transition1{
+            border-radius: 50%;
+        }
+        .transition2{
+            translate: -30rem;
+            border-radius: 50%;
+            background-color: blueviolet;
+        }
+        .transition3{
+            translate:0rem 30rem;
+            border-radius: 50%;
+            background-color: rgb(17, 219, 30);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="rectangle"></div>
+        <button id="myBtn">click me</button>
+    </section>
+
+    <script>
+        let btn = document.getElementById('myBtn');
+        let rec = document.querySelector(".rectangle");
+
+        const handelMauseEvent = () => {
+            console.log("click");
+            rec.style.backgroundColor = 'red';
+        }
+        const handelMauseEvent1 = () => {
+            console.log("dblclick");
+            rec.classList.add("transition1");
+        }
+        const handelMauseEvent2 = () => {
+            console.log("mouseover");
+            rec.classList.add("transition2");
+        }
+        const handelMauseEvent3 = () => {
+            console.log("mouseup");
+            rec.classList.add("transition3");
+        }
+
+        btn.addEventListener('click',handelMauseEvent);
+        btn.addEventListener('dblclick',handelMauseEvent1);
+        rec.addEventListener('mouseover',handelMauseEvent2);
+        rec.addEventListener('mouseup',handelMauseEvent3);
+
+    </script>
+</body>
+
+</html>

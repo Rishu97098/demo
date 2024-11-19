@@ -1,0 +1,40 @@
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: darkolivegreen;
+}
+.loder{
+    width: 20rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color:rgba(256,0,0,.5);
+    position: relative;
+    animation: circlel 2s linear infinite;
+}
+@keyframes circlel{
+    100%{
+        rotate: -360deg;
+    }
+}
+.loder::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color:#556b2f ;
+}
+.loder::after{
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: 7rem;
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color:red ;
+    box-shadow: 0 0 1rem red,0 0 1.5rem red,0 0 2rem red,0 0 2.5rem red,0 0 3rem red;
+}
